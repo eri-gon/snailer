@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,800&display=swap');
+
+.snailer-header {
+  --postal-blue: #004b87;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+  color: var(--postal-blue);
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-align: left;
+}
+
+.snailer-header__brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+  color: var(--postal-blue);
+  text-decoration: none;
+}
+
+.snailer-header__snail {
+  width: 68px;
+  height: 44px;
+}
+
+.snailer-header__wordmark {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.4px;
+}
+
+.snailer-header a:focus-visible {
+  z-index: 1;
+  outline: 3px solid var(--postal-blue);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .snailer-header {
+    padding: 16px;
+  }
+}

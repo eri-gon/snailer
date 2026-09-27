@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Header } from "./Header";
 export default function App() {
   const [pages, setPages] = useState<File[]>([]);
   const [status, setStatus] = useState("");
@@ -44,10 +45,12 @@ export default function App() {
   const imageId = new URLSearchParams(window.location.search).get("image");
 
   if (imageId !== null) {
-    return <UploadedImage key={imageId} id={imageId} />;
+    return <><Header isUploadPage={false} /><UploadedImage key={imageId} id={imageId} /></>;
   }
 
   return (
+    <>
+    <Header isUploadPage />
     <main>
       <h1>Snailer</h1>
 
@@ -93,6 +96,7 @@ export default function App() {
         ))}
       </ul>
     </main>
+    </>
   );
 }
 
